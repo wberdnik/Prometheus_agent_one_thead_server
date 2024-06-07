@@ -1,1 +1,3 @@
-# Prometheus_agent_one_thead_server
+## Prometheus agent as onethead web server
+
+* A custom application to collect nginx logs as Prometheus agent

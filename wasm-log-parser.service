@@ -1,0 +1,18 @@
+# Root agent systemd service file
+
+[Unit]
+Description=A Prometheus Agent as Nginx log parser of Wasm script
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+PermissionsStartOnly=true
+WorkingDirectory=/opt/wasm-log-parser
+ExecStart=/opt/wasm-log-parser/wasm-log-parser
+TimeoutSec=infinity
+Restart=on-failure
